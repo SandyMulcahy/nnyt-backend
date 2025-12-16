@@ -114,3 +114,13 @@ def checknewuser(userData):
     with open("./files/users.txt", 'a') as f:
         f.write(userData + "\n")
     return str(i)
+
+
+
+import os
+# ... your routes and setup ...
+app = Flask(__name__)
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
